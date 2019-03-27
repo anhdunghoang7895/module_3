@@ -1,0 +1,117 @@
+
+
+.header{
+	position: static;
+	border-style:solid ;
+	border-color: black;
+
+	padding: 100px 300px ;
+}
+.head-link{
+	position: static;
+	padding: 10px 0px;
+}
+.left{
+	border-style:solid ;
+	position: static;
+	padding: 10px;
+	width: 200px;
+	height: 400px;
+	float: left;
+}
+.right{
+	
+	border-style:solid ;
+	padding: 10px;
+	width: 200px;
+	height: 400px;
+	float: right;
+}
+.content{
+	border-style:solid ;
+	height: 400px;
+	padding: 10px;
+	float: center;
+}
+.footer{
+	padding: 20px 50px ;
+	float: bottom;
+	border-style:solid ;
+}
+
+.id{
+	border-style: solid;
+	width: 30%;
+	height: 100%;
+}
+#search_bar{
+	float:right;
+	margin: center;
+	border-style: solid;
+	border-color: black;
+}
+#search_input {
+
+	height: 40px;
+	width: 400px;
+}
+
+h3{
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	margin: auto;
+	padding: auto;
+	overflow: hidden;
+	background-color: #333;
+	box-sizing: border-box;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-right: 1px solid;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+
+
+h2{
+	font-size: 20px;
+	background-color: gray;
+	color:red;
+}
+a{
+	color-rendering: blue;
+	float: left;
+}
+
+#search_icon{
+	padding: 0px;
+	height: 46px;
+	width: 46px;
+	float: right;
+	border-style:solid ;
+	border-color: black;
+	border-right: none;
+}
+
+
+
+#funny_icon{
+	float: left;
+	height: 49px;
+	width: 49px;
+}
