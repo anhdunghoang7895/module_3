@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="poly.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Layouts</title>
+</head>
+<body>
+	<div class="container" style = "height: auto">
+
+
+		<header class="row" role="navigation">
+			<div class = "shopping-mall">
+				<h1>Online shopping mall</h1>
+				<h5>The center point of the professional programming</h5>
+			</div>
+			<img class = "pull-right" src="operator-banner.jpg"/> 
+		</header>
+
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><span class="fa fa-home"></span> Trang chủ</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown active">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="fa fa-th-list"></span> Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="fa fa-book"></span> Giới thiệu</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="fa fa-phone"></span> Liên hệ</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link disabled" href="#"><span class="fa fa-envelope"></span> Góp ý</a>
+					</li>
+					
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="fa fa-question"></span> Hỏi đáp</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="fa fa-user"></span> Tài khoản</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</nav>
+
+		
+		<div class = "row">
+			<article class="col-sm-9">
+				<div class="row">
+					<div class = "col-sm-3 poly-prod">
+						<div class = "panel panel-default">
+							<div class = "panel-heading">
+								<h4 class = "panel-title">
+									Nokia
+								</h4>
+							</div>
+							<div class = "panel-body">
+								<img src="images/computer.png" height="228" width="100%"/></div>
+								<div class = "panel-footer">
+									$ 100.25
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+
+
+				<aside class="col-sm-3">
+					<div class = "poly-cart">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<p><span class="fa fa-shopping-cart"></span>Shopping Cart</p>
+								<ul class="col-sm-7">
+									<li>100 items</li>
+									<li>$56.8</li>
+									<li><a href="#">Xem giỏ hàng</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<form>
+								<input placeholder="Keywords" class="form-control"/>
+							</form>
+						</div>
+					</div> 
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<span class = "glyphicon glyphicon-th-list"></span>
+							<strong>Chủng Loại</strong>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item">Điện thoại di động</a>
+							<a href="#" class="list-group-item">Máy tính xách tay</a>
+							<a href="#" class="list-group-item">Máy tính để bàn</a>
+							<a href="#" class="list-group-item">Quạt máy</a>
+							<a href="#" class="list-group-item">Tivi</a>
+							<a href="#" class="list-group-item">Tủ lạnh</a>
+						</div>
+					</div> 
+				</aside>
+			</div>
+			<footer class="panel panel-default">
+				<div class = "panel-heading text-center">
+					<p>CodeGym &copy; 2017</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+	</html>
+
+
+
+
+
