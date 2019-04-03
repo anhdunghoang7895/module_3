@@ -1,0 +1,8 @@
+{
+   "compilerOptions": {
+       "target"    : "es6",
+       "outDir"    : "mjs",
+       "removeComments" : true,
+       "watch"     : true
+   }
+}

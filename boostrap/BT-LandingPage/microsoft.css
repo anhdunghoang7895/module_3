@@ -1,0 +1,26 @@
+body{
+	padding: 0px 50px 0px 50px;
+	text-align: center;
+}
+.mega-menu{
+	width: 1000px;
+	overflow: hidden;
+	left: 400px;
+
+}
+ 
+nav{
+	background: #DCDCDC;
+	border-radius: 25px;
+}
+div a{
+	color: black;
+}
+
+h6{
+	color: black;
+	font-size: 10px;
+}
+a {
+	float: left;
+}
