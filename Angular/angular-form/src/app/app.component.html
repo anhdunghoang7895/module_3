@@ -15,9 +15,16 @@
     Welcome to {{ title }}!
   </h1>
 </div>
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" [routerLink] = "['/login']" routerLinkActive="active">login</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink] ="['/register']" routerLinkActive="active">register</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink] ="['/todo']" routerLinkActive="active">todo</a></li>
+      <li class="nav-item"><a class="nav-link" [routerLink] = "['/template']" routerLinkActive="active">template</a></li>
+    </ul>
 
-<app-template-driven-form></app-template-driven-form>
+</nav>
 
-<app-register></app-register>
-
-<app-todo-app></app-todo-app>
+<section>
+  <router-outlet></router-outlet>
+</section>
