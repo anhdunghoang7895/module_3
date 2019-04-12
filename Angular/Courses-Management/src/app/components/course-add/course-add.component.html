@@ -1,0 +1,21 @@
+<form action="" method="POST" role="form">
+  <legend>Create more Course</legend>
+
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="newCourse.name" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <div class="form-group">
+    <label for="">Description</label>
+    <textarea class="form-control" rows="3" [(ngModel)]="newCourse.description"
+      [ngModelOptions]="{standalone: true}"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="">Fee</label>
+    <input type="number" class="form-control" [(ngModel)]="newCourse.fee" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="onAddCourse()">Save</button>
+</form>

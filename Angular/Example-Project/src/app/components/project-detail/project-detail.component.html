@@ -1,0 +1,11 @@
+<table *ngIf="project" class="projectDetail">
+  <div >
+    <div><span>id: </span>{{project.id}}</div>
+    <div>
+      <label>title:
+        <input [(ngModel)]="project.title"/>
+        <p> Content:{{project.content}} </p>
+      </label>
+    </div>
+</div>
+</table>

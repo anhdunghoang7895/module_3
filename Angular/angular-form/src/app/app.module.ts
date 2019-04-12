@@ -13,6 +13,7 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
 import { LoginComponent } from './login/login.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 
+
 @NgModule({
   declarations: [
      AppComponent,
@@ -20,7 +21,8 @@ import { ViewDetailComponent } from './view-detail/view-detail.component';
      RegisterComponent,
      TodoAppComponent,
      LoginComponent,
-     ViewDetailComponent
+     ViewDetailComponent,
+     
   ],
   imports: [
      BrowserModule,

@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   constructor(private fb: FormBuilder) { }
@@ -20,5 +21,4 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log(this.loginForm);
   }
-
 }

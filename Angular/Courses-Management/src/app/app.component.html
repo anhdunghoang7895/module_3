@@ -1,0 +1,18 @@
+<div class="header">
+  <div>
+    <nav class="nav navbar-light justify-content-center">
+      <a class="navbar-brand justify-content-center">Title</a>
+      <ul class="nav justify-content-center">
+        <li class="nav-item" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]="['/']" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/courses']" class="nav-link">Courses</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

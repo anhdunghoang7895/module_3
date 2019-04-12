@@ -1,0 +1,11 @@
+<form action="post" style="border: solid">
+  <div>
+    <h2>Title:</h2>
+    <input type="text" [formControl]="title">
+  </div>
+  <div>
+    <h2>Content:</h2>
+    <textarea [formControl]="content" rows="10" cols="30" ></textarea>
+  </div>
+  <button (click)="CreateProject()">Create Project</button>
+</form>

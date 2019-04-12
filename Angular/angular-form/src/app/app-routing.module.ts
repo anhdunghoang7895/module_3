@@ -12,7 +12,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent},
     { path: 'todo', component: TodoAppComponent},
     { path: 'template', component: TemplateDrivenFormComponent},
-    { path : 'detail/:id', component: ViewDetailComponent}
+    {path : 'detail/:id', component: ViewDetailComponent}
 ]
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

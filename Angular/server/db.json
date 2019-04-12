@@ -1,0 +1,40 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "description": "Eschweiler",
+      "fee": 10
+    },
+    {
+      "id": 2,
+      "name": "Android",
+      "description": "Eschweiler",
+      "fee": 0
+    },
+    {
+      "name": "csacsa",
+      "description": "daswdawd",
+      "fee": 12,
+      "id": 3
+    },
+    {
+      "name": "HTML",
+      "description": "reeeeeeeeeeeeeeeeeeeeeee",
+      "fee": 123,
+      "id": 4
+    },
+    {
+      "name": "PHP",
+      "description": "back-end",
+      "fee": 50,
+      "id": 5
+    },
+    {
+      "name": "ascsacacas",
+      "description": "sdaadasdasdasdad",
+      "fee": 12,
+      "id": 6
+    }
+  ]
+}

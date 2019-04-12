@@ -1,0 +1,10 @@
+<form class="form" (ngSubmit)="onSubmit()">
+  <input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo..." class="form-control">
+  <app-error-validate [control]="title"></app-error-validate>
+  <input type="submit" value="Submit" class="btn">
+</form>
+
+
+
+
+

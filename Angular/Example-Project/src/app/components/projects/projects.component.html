@@ -1,0 +1,22 @@
+<table class="projectsTable">
+  <tr>
+      <th>STT</th>
+      <th>Title</th>
+      <th>status</th>
+      <th>action</th>
+  </tr>
+  <tr *ngFor="let project of projects">
+    <th>{{project.id}}</th>
+    <th>{{project.title}}</th>
+    <th>
+      <p *ngIf="project.status">Finished</p>
+      <p *ngIf="!project.status" class="alert alert-danger">Unfinish</p>
+    </th>
+    <th>
+      <button (click)="onSelect(project)">View Detail</button>
+      <button>Edit Project</button>
+      <button>Delete Project</button>
+    </th>
+  </tr>
+</table>
+<app-project-detail [project]="selectedProject"></app-project-detail>

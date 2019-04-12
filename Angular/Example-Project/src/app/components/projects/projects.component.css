@@ -1,0 +1,14 @@
+.projectsTable{
+    border: solid;
+    padding: 10px;
+    align-self: center;
+    align-content: center;
+}
+
+tr{
+    border: solid 0.5px;
+}
+
+th{
+    border: solid 0.5px;
+}

@@ -1,0 +1,32 @@
+<div class="card text-center">
+  <div class="card-header">
+    <h4 class="card-title">Courses List</h4>
+  </div>
+  <div class="card-body">
+    <button type="button" class="btn btn-dark" [routerLink]="['/courses/add']"
+      style="float: left; margin-bottom:5px">Create Course</button>
+    <table class="table table-bordered table-hover" [style.margin-top.px]=10>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of courses; let i = index">
+          <th>{{i+1}}</th>
+          <th>{{item.name}}</th>
+          <th>{{item.description}}</th>
+          <th>{{ item.fee > 0 ? (item.fee | currency:'USD' : true) : "Free"}}</th>
+          <th>
+              <button type="button" class="btn btn-success" >Edit</button>
+              <button type="button" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
