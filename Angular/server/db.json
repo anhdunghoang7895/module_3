@@ -3,26 +3,14 @@
     {
       "id": 1,
       "name": "Angular",
-      "description": "Eschweiler",
-      "fee": 10
-    },
-    {
-      "id": 2,
-      "name": "Android",
-      "description": "Eschweiler",
+      "description": "hack não",
       "fee": 0
     },
     {
-      "name": "csacsa",
-      "description": "daswdawd",
-      "fee": 12,
-      "id": 3
-    },
-    {
-      "name": "HTML",
-      "description": "reeeeeeeeeeeeeeeeeeeeeee",
-      "fee": 123,
-      "id": 4
+      "id": 2,
+      "name": "Androiddisajdisadjasiodjsaiodjsaoidjsaodi",
+      "description": "Eschweiler",
+      "fee": 0
     },
     {
       "name": "PHP",
@@ -31,10 +19,16 @@
       "id": 5
     },
     {
-      "name": "ascsacacas",
-      "description": "sdaadasdasdasdad",
+      "name": "scsacasc",
+      "description": "asdqdqwdwqfq",
       "fee": 12,
       "id": 6
+    },
+    {
+      "name": "sacsac",
+      "description": "13213",
+      "fee": 321414,
+      "id": 7
     }
   ]
 }

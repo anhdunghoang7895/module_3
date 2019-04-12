@@ -22,8 +22,8 @@
           <th>{{item.description}}</th>
           <th>{{ item.fee > 0 ? (item.fee | currency:'USD' : true) : "Free"}}</th>
           <th>
-              <button type="button" class="btn btn-success" >Edit</button>
-              <button type="button" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+              <button type="button" class="btn btn-success"  [routerLink]="['/courses',item.id,'edit']">Edit</button>
+              <button type="button" class="btn btn-danger" style="margin-left: 10px" (click)="onDeleteCourse(item.id)">Delete</button>
           </th>
         </tr>
       </tbody>

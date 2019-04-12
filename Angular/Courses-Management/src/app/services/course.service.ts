@@ -20,4 +20,16 @@ export class CourseService {
   addCourse(course: course){
     return this.http.post<course>(this.API, course);
   }
+
+  getOneCourse(id: number){
+    return this.http.get<course>(`${this.API}/${id}`);
+  }
+
+  updateCourse(course: course){
+    return this.http.put(`${this.API}/${course.id}`, course); 
+  }
+
+  deleteCourse(id: number){
+     return this.http.delete<course>(`${this.API}/${id}`);
+  }
 }
