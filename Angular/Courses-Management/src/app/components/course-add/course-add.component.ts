@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
-import { course } from 'src/app/models/course.model';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
@@ -10,24 +10,27 @@ import { CourseService } from 'src/app/services/course.service';
   templateUrl: './course-add.component.html',
   styleUrls: ['./course-add.component.scss']
 })
-export class CourseAddComponent implements OnInit {
 
-
+export class CourseAddComponent implements OnInit,OnDestroy {
   public subscription: Subscription;
-  public newCourse: course;
+  public formAddCourse: FormGroup;
 
   constructor(
     public courseService: CourseService,
-    public routerService: Router
+    public routerService: Router,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
-    this.newCourse = new course();
+    this.createForm();
   }
 
   onAddCourse() {
-    this.subscription = this.courseService.addCourse(this.newCourse).subscribe(returnData => {
-      if (returnData && returnData.id) {
+    this.subscription = this.courseService.addCourse(this.formAddCourse.value).subscribe(PostingData => {
+      if( PostingData == null){
+        return null;
+      }
+      if (PostingData && PostingData.id) {
         this.routerService.navigate(['courses']);
       }
     });
@@ -39,4 +42,27 @@ export class CourseAddComponent implements OnInit {
     }
   }
 
+  createForm(){
+    this.formAddCourse = this.formBuilder.group({
+      name: ['',[
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(50),
+      ]],
+      description: ['',[
+        Validators.required,
+      ]],
+      fee: ['',[
+        Validators.required,
+      ]],
+    });
+
+    this.formAddCourse.valueChanges.subscribe(insertData=>{
+      console.log(this.formAddCourse);
+    });
+  }
+
+  onClickReset(){
+    this.formAddCourse.reset();
+  }
 }

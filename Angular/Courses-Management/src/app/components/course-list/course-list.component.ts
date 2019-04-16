@@ -1,8 +1,8 @@
-import { Component, OnInit ,OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CourseService } from 'src/app/services/course.service';
-import {course} from 'src/app/models/course.model';
+import { course } from 'src/app/models/course.model';
 
 
 @Component({
@@ -10,6 +10,7 @@ import {course} from 'src/app/models/course.model';
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.scss']
 })
+
 export class CourseListComponent implements OnInit {
   public subscription: Subscription;
   public courses: course[] = [];
@@ -23,20 +24,20 @@ export class CourseListComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    if(this.subscription){
+    if (this.subscription) {
       this.subscription.unsubscribe();
     }
   }
 
-  onDeleteCourse(id: number){
+  onDeleteCourse(id: number) {
     this.subscription = this.courseService.deleteCourse(id).subscribe((data: course) => {
       this.updateDataAfterDelete(id);
     });
   }
 
-  updateDataAfterDelete(id: number){
-    for( var i = 0; i < this.courses.length; i++){
-      if(this.courses[i].id == id){
+  updateDataAfterDelete(id: number) {
+    for (var i = 0; i < this.courses.length; i++) {
+      if (this.courses[i].id == id) {
         this.courses.splice(i, 1);
         break;
       }

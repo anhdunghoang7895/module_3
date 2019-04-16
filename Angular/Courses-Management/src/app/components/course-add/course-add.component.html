@@ -1,21 +1,33 @@
-<form action="" method="POST" role="form">
+<form [formGroup]="formAddCourse" action="" method="POST" role="form" (ngSubmit)="onAddCourse()">
   <legend>Create more Course</legend>
 
   <div class="form-group">
     <label for="">Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newCourse.name" [ngModelOptions]="{standalone: true}">
+    <input type="text" class="form-control" formControlName="name">
+    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.required">
+      Vui lòng nhập tên
+    </span>
+    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.minlength">
+      tên từ 5-20 kí tự
+    </span>
   </div>
 
   <div class="form-group">
     <label for="">Description</label>
-    <textarea class="form-control" rows="3" [(ngModel)]="newCourse.description"
-      [ngModelOptions]="{standalone: true}"></textarea>
+    <textarea class="form-control" rows="3" formControlName="description"></textarea>
+    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.description.dirty && formAddCourse.controls.description.errors?.required">
+      Vui lòng nhập mô tả
+    </span>
   </div>
 
   <div class="form-group">
     <label for="">Fee</label>
-    <input type="number" class="form-control" [(ngModel)]="newCourse.fee" [ngModelOptions]="{standalone: true}">
+    <input type="number" class="form-control"  formControlName="fee">
+    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.fee.dirty && formAddCourse.controls.fee.errors?.required">
+      Vui lòng nhập mức phí
+    </span>
   </div>
 
-  <button type="submit" class="btn btn-primary" (click)="onAddCourse()">Save</button>
+  <button [disabled]="formAddCourse.invalid" type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary" (click)="onClickReset()">Reset</button>
 </form>
