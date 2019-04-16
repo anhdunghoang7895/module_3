@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Subscription, from } from 'rxjs';
 import { Router } from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import { CourseService } from 'src/app/services/course.service';
+import {course} from 'src/app/models/course.model';
 
 @Component({
   selector: 'app-course-add',
@@ -14,6 +15,8 @@ import { CourseService } from 'src/app/services/course.service';
 export class CourseAddComponent implements OnInit,OnDestroy {
   public subscription: Subscription;
   public formAddCourse: FormGroup;
+  public courses: course[];
+
 
   constructor(
     public courseService: CourseService,
@@ -27,11 +30,10 @@ export class CourseAddComponent implements OnInit,OnDestroy {
 
   onAddCourse() {
     this.subscription = this.courseService.addCourse(this.formAddCourse.value).subscribe(PostingData => {
-      if( PostingData == null){
-        return null;
-      }
       if (PostingData && PostingData.id) {
+        this.onClickReset();
         this.routerService.navigate(['courses']);
+        
       }
     });
   }

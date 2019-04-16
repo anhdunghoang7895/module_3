@@ -3,8 +3,17 @@
     <h4 class="card-title">Courses List</h4>
   </div>
   <div class="card-body">
-    <button type="button" class="btn btn-dark" [routerLink]="['/courses/add']"
-      style="float: left; margin-bottom:5px">Create Course</button>
+    <button type="button" class="btn btn-dark" style="float: left; margin-bottom:5px" data-toggle="modal"
+      data-target="#exampleModal">Create Course</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="document" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 0px 5px 0px 5px">
+          <app-course-add></app-course-add>
+        </div>
+      </div>
+    </div>
+
     <table class="table table-bordered table-hover" [style.margin-top.px]=10>
       <thead>
         <tr>
@@ -22,8 +31,9 @@
           <th>{{item.description}}</th>
           <th>{{ item.fee > 0 ? (item.fee | currency:'USD' : true) : "Free"}}</th>
           <th>
-              <button type="button" class="btn btn-success"  [routerLink]="['/courses',item.id,'edit']">Edit</button>
-              <button type="button" class="btn btn-danger" style="margin-left: 10px" (click)="onDeleteCourse(item.id)">Delete</button>
+            <button type="button" class="btn btn-success" [routerLink]="['/courses',item.id,'edit']">Edit</button>
+            <button type="button" class="btn btn-danger" style="margin-left: 10px"
+              (click)="onDeleteCourse(item.id)">Delete</button>
           </th>
         </tr>
       </tbody>

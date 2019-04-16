@@ -1,33 +1,46 @@
-<form [formGroup]="formAddCourse" action="" method="POST" role="form" (ngSubmit)="onAddCourse()">
+<form [formGroup]="formAddCourse" class="popUpAddForm" id="myPopUpAddForm" method="POST" role="form"
+  (ngSubmit)="onAddCourse()">
   <legend>Create more Course</legend>
 
-  <div class="form-group">
+  <div class="form-group" style="text-align: left">
     <label for="">Name</label>
     <input type="text" class="form-control" formControlName="name">
-    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.required">
+    <span class="badge badge-pill badge-danger"
+      *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.required">
       Vui lòng nhập tên
     </span>
-    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.minlength">
+    <span class="badge badge-pill badge-danger"
+      *ngIf="formAddCourse.controls.name.dirty && formAddCourse.controls.name.errors?.minlength">
       tên từ 5-20 kí tự
     </span>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" style="text-align: left">
     <label for="">Description</label>
     <textarea class="form-control" rows="3" formControlName="description"></textarea>
-    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.description.dirty && formAddCourse.controls.description.errors?.required">
+    <span class="badge badge-pill badge-danger"
+      *ngIf="formAddCourse.controls.description.dirty && formAddCourse.controls.description.errors?.required">
       Vui lòng nhập mô tả
     </span>
   </div>
 
-  <div class="form-group">
+  <div class="form-group" style="text-align: left">
     <label for="">Fee</label>
-    <input type="number" class="form-control"  formControlName="fee">
-    <span class="badge badge-pill badge-danger" *ngIf="formAddCourse.controls.fee.dirty && formAddCourse.controls.fee.errors?.required">
+    <input type="number" class="form-control" formControlName="fee">
+    <span class="badge badge-pill badge-danger"
+      *ngIf="formAddCourse.controls.fee.dirty && formAddCourse.controls.fee.errors?.required">
       Vui lòng nhập mức phí
     </span>
   </div>
-
-  <button [disabled]="formAddCourse.invalid" type="submit" class="btn btn-primary">Save</button>
-  <button type="button" class="btn btn-primary" (click)="onClickReset()">Reset</button>
+  <div class="row" style="text-align: right">
+    <div style="margin-left: 20px">
+      <button [disabled]="formAddCourse.invalid" type="submit" class="btn btn-primary">Save</button>
+    </div>
+    <div style="margin-right: 10px;margin-left: 10px">
+      <button type="button" class="btn btn-primary" (click)="onClickReset()" style="padding-left: 10px">Reset</button>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary text-center" data-dismiss="modal" >Close</button>
+    </div>
+  </div>
 </form>
